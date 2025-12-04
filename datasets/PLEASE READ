@@ -3,3 +3,5 @@ Oracle Elixer's Public Match Dataset using Riot Games Data
 https://drive.google.com/drive/u/1/folders/1gLSw0RLjBbtaNy0dgnGQDAZOHIgCe-HH
 
 Current code uses 2020 - 2025 Datasets but you can change the train test split for the years in the code
+
+Please Download the datasets manually from the link and place inside of datasets folder on local folder for data preprocessing and model training
