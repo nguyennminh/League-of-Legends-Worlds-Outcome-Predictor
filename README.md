@@ -87,7 +87,19 @@ Download the League of Legends match data from Oracle Elixer's Google Drive. Lin
 
 ## 🚀 Usage
 
-### Training the Model
+### 1. Process the Data 
+
+First, in data_preprocessing.ipynb
+
+⚠️ Make sure you have the datasets from the Oracle Exlixer's Google Drive downloaded and inside of datasets folder
+
+Run the script to combine all csv file datasets residing in datasets folder into combined_dataset.csv
+
+Click on - Run All Cells
+
+### 2. Training the Model
+
+Secondly, in model_training.ipynb
 
 Run the main script to train both models:
 
@@ -100,6 +112,20 @@ This will:
 4. Generate visualizations
 5. Save trained models to disk
 6. Show an example prediction
+
+❗ For changing the train-test split years to correspond with your time range it will be under the Main Function
+
+Find the section of code that has the variable test_year and change the test_year to your desired cutoff, under step - 5. Split Data
+
+```python
+# Use 2025 for test, everything else for train
+        test_year = 2025
+        train_df = df[df['year'] < test_year]
+        test_df = df[df['year'] == test_year]
+```
+
+When deciding for a train-test split it is recommended to do 80% of the data for training and 20% of the data for testing.
+
 
 ### Making Predictions
 
